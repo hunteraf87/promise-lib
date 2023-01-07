@@ -1,0 +1,31 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "Промисы",
+  "main": "",
+  "directories": {},
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint ./src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunteraf87/promises.git"
+  },
+  "keywords": [],
+  "author": "Albert Tuitsyn <hunteraf@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunteraf87/promises/issues"
+  },
+  "homepage": "https://github.com/hunteraf87/promises#readme",
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "assert": "^2.0.0",
+    "eslint": "^8.26.0",
+    "mocha": "^10.0.0",
+    "ts-node": "^10.9.1"
+  }
+}
