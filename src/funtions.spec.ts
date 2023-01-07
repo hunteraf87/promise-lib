@@ -1,5 +1,5 @@
 import assert from "assert";
-import {sleep, timeout, setImmediateCustom, clearImmediateCustom, allLimit, promisify} from './';
+import {sleep, timeout, allLimit, promisify} from './';
 
 describe("Functions", function () {
     it("Sleep", async function () {
@@ -24,22 +24,6 @@ describe("Functions", function () {
             .catch((err) => {
                 assert.strictEqual(err, 'Timeout expired');
             })
-    });
-
-    it("Immediate", () => {
-        function test(param: string) {
-            assert.strictEqual(param, 'test');
-        }
-        function test2(param: string) {
-            assert.strictEqual(param, 'test');
-        }
-        const immediate = setImmediateCustom(test, 'test');
-        const immediateCancel = setImmediateCustom(test2, 'booom');
-
-        clearImmediateCustom(immediateCancel);
-
-        assert.strictEqual(immediate.destroyed, false);
-        assert.strictEqual(immediateCancel.destroyed, true);
     });
 
     it("Promisify", async () => {
